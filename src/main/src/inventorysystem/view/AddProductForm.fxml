@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="551.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventorysystem.controller.AddProductController">
+   <children>
+      <Pane layoutX="49.0" layoutY="35.0" prefHeight="476.0" prefWidth="807.0" style="-fx-border-color: black; -fx-border-radius: 10px;">
+         <children>
+            <Text layoutX="45.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Product">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text layoutX="63.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+            <TextField fx:id="idField" disable="true" layoutX="114.0" layoutY="119.0" promptText="Auto Gen - Disabled" />
+            <Text layoutX="63.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+            <TextField fx:id="nameField" layoutX="114.0" layoutY="166.0" />
+            <Text layoutX="63.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inv" />
+            <TextField fx:id="invField" layoutX="114.0" layoutY="213.0" onKeyTyped="#onValidatedInput" prefHeight="25.0" prefWidth="76.0" />
+            <Text layoutX="63.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+            <TextField fx:id="priceField" layoutX="114.0" layoutY="264.0" onKeyTyped="#onValidatedInput" prefHeight="25.0" prefWidth="76.0" />
+            <Text layoutX="63.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max" />
+            <TextField fx:id="maxField" layoutX="114.0" layoutY="311.0" onKeyTyped="#onValidatedInput" prefHeight="25.0" prefWidth="76.0" />
+            <Text layoutX="226.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min" />
+            <TextField fx:id="minField" layoutX="277.0" layoutY="311.0" onKeyTyped="#onValidatedInput" prefHeight="25.0" prefWidth="76.0" />
+            <TableView fx:id="partTable" layoutX="391.0" layoutY="76.0" prefHeight="137.0" prefWidth="384.0">
+              <columns>
+                <TableColumn fx:id="allPartsID" prefWidth="75.0" text="Part ID" />
+                <TableColumn fx:id="allPartsName" prefWidth="75.0" text="Part Name" />
+                  <TableColumn fx:id="allPartsStock" prefWidth="100.0" text="Inventory Level" />
+                  <TableColumn fx:id="allPartsPrice" prefWidth="134.0" text="Price/ Cost per Unit" />
+              </columns>
+            </TableView>
+            <TableView fx:id="associatedTable" layoutX="391.0" layoutY="255.0" prefHeight="137.0" prefWidth="384.0">
+               <columns>
+                  <TableColumn fx:id="productPartID" prefWidth="75.0" text="Part ID" />
+                  <TableColumn fx:id="productPartName" prefWidth="75.0" text="Part Name" />
+                  <TableColumn fx:id="productPartStock" prefWidth="100.0" text="Inventory Level" />
+                  <TableColumn fx:id="productPartPrice" prefWidth="134.0" text="Price/ Cost per Unit" />
+               </columns>
+            </TableView>
+            <Button layoutX="682.0" layoutY="221.0" mnemonicParsing="false" onAction="#onAddPressed" text="Add" />
+            <Button layoutX="630.0" layoutY="402.0" mnemonicParsing="false" onAction="#onRemovePressed" text="Remove Associated Part" />
+            <Button fx:id="saveButton" layoutX="630.0" layoutY="437.0" mnemonicParsing="false" onAction="#onSavePressed" text="Save" />
+            <Button layoutX="694.0" layoutY="437.0" mnemonicParsing="false" onAction="#onCancelPressed" text="Cancel" />
+            <TextField fx:id="searchField" layoutX="619.0" layoutY="28.0" onKeyTyped="#onSearchChange" prefHeight="25.0" prefWidth="157.0" promptText="Search by Part ID or Name" />
+            <Text fx:id="idError" fill="RED" layoutX="116.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="nameError" fill="RED" layoutX="116.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="invError" fill="RED" layoutX="116.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="priceError" fill="RED" layoutX="116.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="maxError" fill="RED" layoutX="116.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="minError" fill="RED" layoutX="277.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="partTableError" fill="RED" layoutX="410.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="associatedTableError" fill="RED" layoutX="410.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+         </children></Pane>
+   </children>
+</AnchorPane>

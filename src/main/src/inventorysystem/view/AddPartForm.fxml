@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventorysystem.controller.AddPartController">
+   <children>
+      <Text layoutX="62.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Part">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="inHouseRadio" layoutX="246.0" layoutY="52.0" mnemonicParsing="false" onAction="#onInHouseRadio" selected="true" text="In-House" />
+      <RadioButton fx:id="outsourceRadio" layoutX="385.0" layoutY="52.0" mnemonicParsing="false" onAction="#onOutsourceRadio" text="Outsourced" />
+      <Text layoutX="78.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+      <TextField fx:id="idField" disable="true" editable="false" layoutX="165.0" layoutY="106.0" promptText="Auto Gen - Disabled" />
+      <Text layoutX="78.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+      <TextField fx:id="nameField" layoutX="165.0" layoutY="146.0" />
+      <Text layoutX="78.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inv" />
+      <TextField fx:id="invField" layoutX="165.0" layoutY="188.0" onKeyTyped="#onValidatedInput" />
+      <Text layoutX="78.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price/Cost" />
+      <TextField fx:id="priceField" layoutX="165.0" layoutY="233.0" onKeyTyped="#onValidatedInput" />
+      <Text layoutX="78.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max" />
+      <TextField fx:id="maxField" layoutX="165.0" layoutY="271.0" onKeyTyped="#onValidatedInput" />
+      <Text fx:id="partTypeText" layoutX="78.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Machine ID" />
+      <TextField fx:id="partTypeField" layoutX="165.0" layoutY="313.0" onKeyTyped="#onValidatedInput" />
+      <TextField fx:id="minField" layoutX="385.0" layoutY="271.0" onKeyTyped="#onValidatedInput" />
+      <Text layoutX="347.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min" />
+      <Button fx:id="saveButton" layoutX="393.0" layoutY="351.0" mnemonicParsing="false" onAction="#onSavePressed" text="Save" />
+      <Button layoutX="466.0" layoutY="351.0" mnemonicParsing="false" onAction="#onCancelPressed" text="Cancel" />
+      <Text fx:id="idError" fill="RED" layoutX="168.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="nameError" fill="RED" layoutX="168.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="invError" fill="RED" layoutX="168.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="priceError" fill="RED" layoutX="168.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="maxError" fill="RED" layoutX="168.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="partTypeError" fill="RED" layoutX="168.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="minError" fill="RED" layoutX="390.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+   </children>
+</AnchorPane>

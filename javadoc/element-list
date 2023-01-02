@@ -1,0 +1,5 @@
+module:wgu.c482.inventorysystem
+inventorysystem.controller
+inventorysystem.helpers
+inventorysystem.main
+inventorysystem.model
